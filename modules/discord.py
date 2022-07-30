@@ -146,7 +146,7 @@ class DiscordApi:
 
     @staticmethod
     def register(client: httpx.Client, captcha_key: str, build_num: str, _username=None) -> str:
-        if _username != None: _username = f'i love Skippy | {"".join(random.choice(string.ascii_lowercase+string.digits) for _ in range(3))}'
+        if _username != None: _username = f'Skippy got one'
         payload = Payload.simple_register(_username, client.headers['x-fingerprint'], captcha_key)
 
         xsup = DiscordApi.get_trackers(build_num, False)
